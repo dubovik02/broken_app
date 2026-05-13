@@ -37,6 +37,7 @@ pub fn average_positive(values: &[i64]) -> f64 {
     sum as f64 / positive_numbers.len() as f64
 }
 
+/// # SAFETY
 /// Use-after-free: возвращает значение после освобождения бокса.
 /// UB, проявится под ASan/Miri.
 pub unsafe fn use_after_free() -> i32 {

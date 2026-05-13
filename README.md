@@ -19,11 +19,18 @@
 Результаты первичного тестирования Miri: .artifacts//miri/before_debug.md
 Результаты первичного тестирования Valgrind: .artifacts//valgrind/before_debug.md
 
+Результаты первичного выполнения ASan (RUSTFLAGS="-Zsanitizer=address" cargo +nightly): .artifacts/asan/before_debug.md
+Результаты первичного выполнения TSan (RUSTFLAGS="-Zsanitizer=thread" cargo +nightly): .artifacts/tsan/before_debug.md
+
+
 Ошибки исправлены. Тесты проходят успешно. Вывод clippy не содержит ошибок.
 
 Результаты тестирования после внесения исправлений: .artifacts//tests/after_debug.md
 Результаты тестирования после внесения исправлений Miri: .artifacts/miri/after_debug.md
 Результаты тестирования после внесения исправлений Valgrind: .artifacts/valgrind/after_debug.md
+
+Результаты выполнения ASan после внесенияисправлений (RUSTFLAGS="-Zsanitizer=address" cargo +nightly): .artifacts/asan/after_debug.md
+Результаты выполнения TSan после внесенияисправлений (RUSTFLAGS="-Zsanitizer=thread" cargo +nightly): .artifacts/tsan/after_debug.md
 
 ## Поиск узких мест
 
@@ -92,3 +99,7 @@
 Производительность улучшилась на 91,3% (расчетно), 99,999% по данным Criteerion. Изменение статистически значимо (p < 0.05)
 
 Результаты бенчмарков после оптимизации кода функций ./artifacts/benches/after_opt
+
+
+### Cсылка на reference-app
+https://github.com/dubovik02/reference_app
